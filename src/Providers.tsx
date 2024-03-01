@@ -1,4 +1,5 @@
-// import { Snackbar, SnackbarProvider } from "burgos-snackbar"
+import { Snackbar, SnackbarProvider } from "burgos-snackbar"
+import { IoProvider } from "./contexts/ioContext"
 
 interface ProvidersProps {
     children: React.ReactNode
@@ -6,9 +7,11 @@ interface ProvidersProps {
 
 export const Providers: React.FC<ProvidersProps> = ({ children }) => {
     return (
-        // <SnackbarProvider>
-        //     <Snackbar />
-        //     {children}
-        // </SnackbarProvider>
+        <SnackbarProvider>
+            <IoProvider>
+                <Snackbar />
+                {children}
+            </IoProvider>
+        </SnackbarProvider>
     )
 }
