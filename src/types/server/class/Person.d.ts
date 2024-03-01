@@ -1,0 +1,57 @@
+import { Prisma } from "@prisma/client";
+import { Socket } from "socket.io";
+import { WithoutFunctions } from "./methodizer";
+import { Address, AddressForm } from "./Address";
+import { person as include } from "../prisma/include";
+export type PersonPrisma = Prisma.PersonGetPayload<{
+    include: typeof include;
+}>;
+export declare class Person {
+    id: number;
+    registerDate: string;
+    image?: string;
+    state?: string;
+    classification?: string;
+    creditLimit?: number;
+    commission?: number;
+    antt?: string;
+    category?: string;
+    accountingCategory?: string;
+    municipalInscription?: string;
+    range?: string;
+    suframaInscription?: string;
+    route?: string;
+    finalConsumer?: boolean;
+    client?: boolean;
+    transportCompany?: boolean;
+    supplier?: boolean;
+    employee?: boolean;
+    salesman?: boolean;
+    icmsExemption?: boolean;
+    icmsContributor?: boolean;
+    simpleFederalOptant?: boolean;
+    nfeb2b?: boolean;
+    address?: Address;
+    constructor(id: number);
+    init(): Promise<void>;
+    static register(socket: Socket, data: PersonForm): Promise<void>;
+    static list(socket: Socket): Promise<void>;
+    static find(socket: Socket, id: number): Promise<void>;
+    load(data: PersonPrisma): void;
+}
+export type PersonForm = Omit<WithoutFunctions<Person>, "address" | "id"> & {
+    type: "physical" | "judiciary";
+    addresses?: AddressForm[];
+    id?: number;
+    name: string;
+    nickname: string;
+    cpf: string;
+    rg: string;
+    gender: string;
+    birthCity: string;
+    birthDate: string;
+    socialReason: string;
+    fantasyName: string;
+    headquarters: string;
+    foundingDate: string;
+};
