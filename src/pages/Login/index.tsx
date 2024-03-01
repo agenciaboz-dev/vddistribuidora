@@ -1,13 +1,15 @@
 import React from "react"
-import { Box, TextField } from "@mui/material"
+import { Box, Button, TextField } from "@mui/material"
 import { useNavigate } from "react-router-dom"
 
 interface LoginProps {}
 
 export const Login: React.FC<LoginProps> = ({}) => {
+    const navigate = useNavigate()
     return (
         <Box
             sx={{
+                alignItems: "center",
                 justifyContent: "space-around",
                 height: "100%",
                 width: "100%",
@@ -18,15 +20,18 @@ export const Login: React.FC<LoginProps> = ({}) => {
             </Box>
             <Box
                 sx={{
-                    display: "flex",
                     flexDirection: "column",
-                    backgroundColor: "white",
-                    margin: "auto",
                     gap: "1vw",
+                    margin: "auto",
+                    width: "100%",
                 }}
             >
                 <TextField label="Login"></TextField>
                 <TextField label="Senha"></TextField>
+                <p>Não tem conta?</p>
+                <Button variant="contained" onClick={() => navigate("/cadastro")}>
+                    Cadastre-se
+                </Button>
             </Box>
         </Box>
     )
