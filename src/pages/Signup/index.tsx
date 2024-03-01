@@ -68,15 +68,15 @@ export const Signup: React.FC<SignupProps> = ({}) => {
                         gap: "1vw",
                     }}
                 >
-                    <TextField name="email" label="E-mail" value={formik.values.email} onChange={formik.handleChange} />
-                    <TextField name="password" type="password" label="Senha" value={formik.values.password} onChange={formik.handleChange} />
-                    <TextField name="name" label="Nome" value={formik.values.name} onChange={formik.handleChange} />
-                    <TextField name="cpf" label="CPF" value={formik.values.cpf} onChange={formik.handleChange} />
-                    <TextField name="phone" label="Telefone" value={formik.values.phone} onChange={formik.handleChange} />
+                    <TextField label="E-mail" name="email" value={formik.values.email} onChange={formik.handleChange} />
+                    <TextField label="Senha" name="password" type="password" value={formik.values.password} onChange={formik.handleChange} />
+                    <TextField label="Nome" name="name" value={formik.values.name} onChange={formik.handleChange} />
+                    <TextField label="CPF" name="cpf" value={formik.values.cpf} onChange={formik.handleChange} />
+                    <TextField label="Telefone" name="phone" value={formik.values.phone} onChange={formik.handleChange} />
                     <Button variant="contained" type="submit">
                         {loading ? <CircularProgress size={"1.5rem"} sx={{ color: "#fff" }} /> : "Enviar"}
                     </Button>
-                    <Button variant="outlined" onClick={() => navigate("/login")}>
+                    <Button variant="outlined" color="secondary" onClick={() => navigate("/login")}>
                         Voltar
                     </Button>
                 </Box>
