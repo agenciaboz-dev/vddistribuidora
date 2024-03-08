@@ -1,13 +1,13 @@
 import React from "react"
 import { Box, IconButton } from "@mui/material"
 import { useNavigate } from "react-router-dom"
-import { Icon1 } from "../../../components/SidebarIcons/Icon1"
-import { Icon2 } from "../../../components/SidebarIcons/Icon2"
-import { Icon3 } from "../../../components/SidebarIcons/Icon3"
-import { Icon4 } from "../../../components/SidebarIcons/Icon4"
-import { Icon5 } from "../../../components/SidebarIcons/Icon5"
-import { Icon6 } from "../../../components/SidebarIcons/Icon6"
-import { iconButtonStyle } from "../../../styles/iconButtonStyle"
+import { Icon1 } from "./localComponents/SidebarIcons/Icon1"
+import { Icon2 } from "./localComponents/SidebarIcons/Icon2"
+import { Icon3 } from "./localComponents/SidebarIcons/Icon3"
+import { Icon4 } from "./localComponents/SidebarIcons/Icon4"
+import { Icon5 } from "./localComponents/SidebarIcons/Icon5"
+import { Icon6 } from "./localComponents/SidebarIcons/Icon6"
+import { iconButtonStyle } from "../../../../styles/iconButtonStyle"
 
 interface SidebarProps {}
 

@@ -32,7 +32,7 @@ export const Login: React.FC<LoginProps> = ({}) => {
             setLoading(false)
             console.log("Login feito com sucesso!")
             snackbar({ severity: "success", text: "Login feito com sucesso!" })
-            navigate("/home")
+            navigate("/main")
         })
 
         io.on("user:login:failure", (error) => {

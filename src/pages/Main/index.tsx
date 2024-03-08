@@ -1,11 +1,12 @@
 import React from "react"
 import { Box } from "@mui/material"
 import { useNavigate } from "react-router-dom"
-import { Sidebar } from "./Sidebar"
+import { Sidebar } from "./localComponents/Sidebar"
+import { Route, Routes as ReactRoutes } from "react-router-dom"
 
-interface HomeProps {}
+interface MainProps {}
 
-export const Home: React.FC<HomeProps> = ({}) => {
+export const Main: React.FC<MainProps> = ({}) => {
     const navigate = useNavigate()
 
     return (
@@ -16,6 +17,9 @@ export const Home: React.FC<HomeProps> = ({}) => {
             }}
         >
             <Sidebar />
+            {/* <ReactRoutes>
+                <Route index element={<Login />} />
+            </ReactRoutes> */}
         </Box>
     )
 }
