@@ -56,6 +56,7 @@ export const Signup: React.FC<SignupProps> = ({}) => {
                 justifyContent: "space-around",
                 height: "100%",
                 width: "100%",
+                padding: "2vw",
             }}
         >
             <Box>

@@ -32,6 +32,7 @@ export const Login: React.FC<LoginProps> = ({}) => {
             setLoading(false)
             console.log("Login feito com sucesso!")
             snackbar({ severity: "success", text: "Login feito com sucesso!" })
+            navigate("/home")
         })
 
         io.on("user:login:failure", (error) => {
@@ -53,6 +54,7 @@ export const Login: React.FC<LoginProps> = ({}) => {
                 justifyContent: "space-around",
                 height: "100%",
                 width: "100%",
+                padding: "2vw",
             }}
         >
             <Box>
@@ -68,7 +70,7 @@ export const Login: React.FC<LoginProps> = ({}) => {
                     }}
                 >
                     <TextField label="Login" name="login" value={formik.values.login} onChange={formik.handleChange} />
-                    <TextField label="Senha" name="password" value={formik.values.password} onChange={formik.handleChange} />
+                    <TextField label="Senha" name="password" type="password" value={formik.values.password} onChange={formik.handleChange} />
                     <Button variant="contained" type="submit">
                         {loading ? <CircularProgress size={"1.5rem"} sx={{ color: "#fff" }} /> : "Entrar"}
                     </Button>
