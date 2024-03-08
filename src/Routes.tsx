@@ -13,7 +13,7 @@ export const Routes: React.FC<RoutesProps> = ({}) => {
             <Route path="/login" element={<Login />} />
             <Route path="*" element={<Login />} />
             <Route path="/cadastro" element={<Signup />} />
-            <Route path="/main" element={<Main />} />
+            <Route path="/main/*" element={<Main />} />
         </ReactRoutes>
     )
 }

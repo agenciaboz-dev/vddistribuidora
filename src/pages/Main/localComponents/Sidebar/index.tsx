@@ -40,7 +40,7 @@ export const Sidebar: React.FC<SidebarProps> = ({}) => {
                     margin: "3vw 0",
                 }}
             >
-                <IconButton sx={iconButtonStyle}>
+                <IconButton sx={iconButtonStyle} onClick={() => navigate("/main/atividades")}>
                     <Icon1 />
                 </IconButton>
                 <IconButton sx={iconButtonStyle}>
@@ -55,7 +55,7 @@ export const Sidebar: React.FC<SidebarProps> = ({}) => {
                 <IconButton sx={iconButtonStyle}>
                     <Icon5 />
                 </IconButton>
-                <IconButton sx={iconButtonStyle}>
+                <IconButton sx={iconButtonStyle} onClick={() => navigate("/main/config")}>
                     <Icon6 />
                 </IconButton>
             </Box>
