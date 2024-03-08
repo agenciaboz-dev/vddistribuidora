@@ -1,4 +1,6 @@
 export const iconButtonStyle = {
-    height: "fit-content",
-    width: "fit-content",
+    height: "2vw",
+    width: "2vw",
+    aspectRatio: "1 / 1",
+    borderRadius: "50%",
 }

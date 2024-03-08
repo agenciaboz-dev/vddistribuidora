@@ -54,7 +54,7 @@ export const Login: React.FC<LoginProps> = ({}) => {
                 justifyContent: "space-around",
                 height: "100%",
                 width: "100%",
-                padding: "2vw",
+                padding: "1vw",
             }}
         >
             <Box>
