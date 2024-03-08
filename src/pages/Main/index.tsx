@@ -4,12 +4,11 @@ import { useNavigate } from "react-router-dom"
 import { Sidebar } from "./localComponents/Sidebar"
 import { Route, Routes as ReactRoutes } from "react-router-dom"
 import { Config } from "./subPages/Config"
+import { Activities } from "./subPages/Activities"
 
 interface MainProps {}
 
 export const Main: React.FC<MainProps> = ({}) => {
-    const navigate = useNavigate()
-
     return (
         <Box
             sx={{
@@ -19,7 +18,9 @@ export const Main: React.FC<MainProps> = ({}) => {
         >
             <Sidebar />
             <ReactRoutes>
-                <Route index element={<Config />} />
+                <Route index element={<Activities />} />
+                <Route path="/atividades" element={<Activities />} />
+                <Route path="/config" element={<Config />} />
             </ReactRoutes>
         </Box>
     )
