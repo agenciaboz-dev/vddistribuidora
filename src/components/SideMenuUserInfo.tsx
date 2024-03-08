@@ -1,11 +1,11 @@
 import React from "react"
 import { Avatar, Box, IconButton } from "@mui/material"
-import { VerticalDotsIcon } from "../../../../../../components/VerticalDotsIcon"
-import { iconButtonStyle } from "../../../../../../styles/iconButtonStyle"
+import { VerticalDotsIcon } from "./VerticalDotsIcon"
+import { iconButtonStyle } from "../styles/iconButtonStyle"
 
-interface UserInfoProps {}
+interface SideMenuUserInfoProps {}
 
-export const UserInfo: React.FC<UserInfoProps> = ({}) => {
+export const SideMenuUserInfo: React.FC<SideMenuUserInfoProps> = ({}) => {
     return (
         <Box
             sx={{

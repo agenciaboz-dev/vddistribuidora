@@ -1,6 +1,6 @@
 import React from "react"
 import { Box } from "@mui/material"
-import { ConfigMenu } from "./localComponents/ConfigMenu"
+import { ConfigSideMenu } from "./localComponents/ConfigSideMenu"
 
 interface ConfigProps {}
 
@@ -12,7 +12,7 @@ export const Config: React.FC<ConfigProps> = ({}) => {
                 width: "100%",
             }}
         >
-            <ConfigMenu />
+            <ConfigSideMenu />
         </Box>
     )
 }
