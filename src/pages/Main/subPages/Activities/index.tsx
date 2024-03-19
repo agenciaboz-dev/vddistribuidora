@@ -4,7 +4,8 @@ import { ActivitiesSideMenu } from "./localComponents/ActivitiesSideMenu"
 
 interface ActivitiesProps {}
 
-export const Activities: React.FC<ActivitiesProps> = ({}) => {
+export const Activities: React.FC<ActivitiesProps> = ({ }) => {
+    
     return (
         <Box
             sx={{

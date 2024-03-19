@@ -1,8 +1,9 @@
 import React, { useState } from "react"
-import { MenuItem } from "@mui/material"
+import { Box, MenuItem } from "@mui/material"
 import { KeyboardArrowDown } from "@mui/icons-material"
 import { useLocation, useNavigate } from "react-router-dom"
 import { SideMenuItem } from "../../../../../../types/SideMenuItem"
+import { ActivitiesSideMenuList } from "./ActivitiesSideMenuList"
 
 interface ActivitiesSideMenuButtonProps {
     item: SideMenuItem
@@ -27,7 +28,14 @@ export const ActivitiesSideMenuButton: React.FC<ActivitiesSideMenuButtonProps> =
             onClick={() => navigate(item.path)}
         >
             {item.label}
-            {item.subItems && <KeyboardArrowDown sx={{ marginLeft: "auto", rotate: collapse ? "-180deg" : "", transition: "0.3s" }} />}
+            {item.subItems && (
+                <KeyboardArrowDown sx={{ marginLeft: "auto", rotate: collapse ? "-180deg" : "", transition: "0.3s" }} />
+            )}
+            {/* <Box>
+                {item.subItems?.map((item) => (
+                    <p>{item.label}</p>
+                ))}
+            </Box> */}
         </MenuItem>
     )
 }
