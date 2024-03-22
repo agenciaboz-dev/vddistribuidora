@@ -2,7 +2,7 @@ import { SideMenuItem } from "../../../../../../types/SideMenuItem"
 
 export const ActivitiesSideMenuList: SideMenuItem[] = [
     {
-        path: "",
+        path: "/main/atividades/pedidoEntrada",
         label: "Entradas / Compras",
         subItems: [
             {

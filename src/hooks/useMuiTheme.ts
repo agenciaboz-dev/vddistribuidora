@@ -13,6 +13,7 @@ export const useMuiTheme = () => {
         palette: {
             primary: {
                 main: colors.primary,
+                
             },
             secondary: {
                 main: colors.secondary,

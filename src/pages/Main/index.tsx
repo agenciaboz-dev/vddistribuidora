@@ -18,7 +18,7 @@ export const Main: React.FC<MainProps> = ({}) => {
             <Sidebar />
             <ReactRoutes>
                 <Route index element={<Activities />} />
-                <Route path="/atividades" element={<Activities />} />
+                <Route path="/atividades/*" element={<Activities />} />
                 <Route path="/config" element={<Config />} />
             </ReactRoutes>
         </Box>
