@@ -4,58 +4,166 @@ import { DataGrid, GridColDef } from "@mui/x-data-grid";
 interface ListProps {}
 
 const columns: GridColDef<(typeof rows)[number]>[] = [
-  { field: "id", headerName: "ID", width: 90 },
   {
-    field: "firstName",
-    headerName: "First name",
-    width: 150,
-    editable: true,
+    field: "supplier",
+    headerName: "Fornecedor",
+    width: 180,
   },
   {
-    field: "lastName",
-    headerName: "Last name",
-    width: 150,
-    editable: true,
-  },
-  {
-    field: "age",
-    headerName: "Age",
+    field: "doc",
+    headerName: "CNPJ / CPF",
     type: "number",
-    width: 110,
-    editable: true,
+    width: 180,
   },
   {
-    field: "fullName",
-    headerName: "Full name",
-    description: "This column has a value getter and is not sortable.",
-    sortable: false,
-    width: 160,
-    valueGetter: (value, row) => `${row.firstName || ""} ${row.lastName || ""}`,
+    field: "city",
+    headerName: "Cidade / UF",
+    width: 150,
   },
+  {
+    field: "valProd",
+    headerName: "Valor do Produto",
+    type: "number",
+    width: 150,
+  },
+  {
+    field: "valServ",
+    headerName: "Valor do Serviço",
+    type: "number",
+    width: 150,
+  },
+  {
+    field: "total",
+    headerName: "Total",
+    type: "number",
+    width: 150,
+  },
+  {
+    field: "register",
+    headerName: "Cadastro",
+    type: "number",
+    width: 150,
+  },
+  {
+    field: "prazo",
+    headerName: "Prazo",
+    type: "number",
+    width: 150,
+  },
+  {
+    field: "active",
+    headerName: "Ativo",
+    type: "boolean",
+    width: 50,
+  },
+  {
+    field: "actions",
+    headerName: "Ações",
+    width: 50,
+  },
+
+  //{
+  //  field: "valServ",
+    //headerName: "Full name",
+    //description: "This column has a value getter and is not sortable.",
+    //sortable: false,
+    //width: 160,
+    //valueGetter: (value, row) => `${row.firstName || ""} ${row.lastName || ""}`,
+  //},
 ];
 
 const rows = [
-  { id: 1, lastName: "Snow", firstName: "Jon", age: 14 },
-  { id: 2, lastName: "Lannister", firstName: "Cersei", age: 31 },
-  { id: 3, lastName: "Lannister", firstName: "Jaime", age: 31 },
-  { id: 4, lastName: "Stark", firstName: "Arya", age: 11 },
-  { id: 5, lastName: "Targaryen", firstName: "Daenerys", age: null },
-  { id: 6, lastName: "Melisandre", firstName: null, age: 150 },
-  { id: 7, lastName: "Clifford", firstName: "Ferrara", age: 44 },
-  { id: 8, lastName: "Frances", firstName: "Rossini", age: 36 },
-  { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
+  {
+    id: 1,
+    supplier: "Papel&CIA",
+    doc: 12345678,
+    city: "Londrina - PA",
+    valProd: 14,
+    valServ: 154,
+    total: 1578,
+    register: 111221,
+    prazo: 151418,
+    active: true,
+    actions: ">>>"
+
+  },
+  {
+    id: 2,
+    supplier: "Papel&CIA",
+    doc: 12345678,
+    city: "Londrina - PA",
+    valProd: 14,
+    valServ: 154,
+    total: 1578,
+    register: 111221,
+    prazo: 151418,
+    active: true,
+    actions: ">>>"
+  },
+  {
+    id: 3,
+    supplier: "Papel&CIA",
+    doc: 12345678,
+    city: "Londrina - PA",
+    valProd: 14,
+    valServ: 154,
+    total: 1578,
+    register: 111221,
+    prazo: 151418,
+    active: true,
+    actions: ">>>"
+  },
+  {
+    id: 4,
+    supplier: "Papel&CIA",
+    doc: 12345678,
+    city: "Londrina - PA",
+    valProd: 14,
+    valServ: 154,
+    total: 1578,
+    register: 111221,
+    prazo: 151418,
+    active: true,
+    actions: ">>>"
+  },
+  {
+    id: 5,
+    supplier: "Papel&CIA",
+    doc: 12345678,
+    city: "Londrina - PA",
+    valProd: 14,
+    valServ: 154,
+    total: 1578,
+    register: 111221,
+    prazo: 151418,
+    active: true,
+    actions: ">>>"
+  },
+  {
+    id: 6,
+    supplier: "Papel&CIA",
+    doc: 12345678,
+    city: "Londrina - PA",
+    valProd: 14,
+    valServ: 154,
+    total: 1578,
+    register: 111221,
+    prazo: 151418,
+    active: true,
+    actions: ">>>"
+  },
 ];
 
 export const List: React.FC<ListProps> = ({}) => {
   return (
-    <Box sx={{width:1}}>
+    <Box sx={{ width: 1 }}>
       <DataGrid
         rows={rows}
         columns={columns}
         initialState={{
           pagination: {
             paginationModel: {
-              pageSize: 5,
+              pageSize: 10,
             },
           },
         }}
