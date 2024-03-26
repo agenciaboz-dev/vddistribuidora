@@ -18,7 +18,7 @@ export const ActivitiesSideMenu: React.FC<ActivitiesSideMenuProps> = ({}) => {
         >
             <SideMenuUserInfo />
 
-            <h2 style={{ margin: "1vw 0" }}>Atividades</h2>
+            <h2 style={{ margin: "1vw 0", fontWeight: "400" }}>Atividades</h2>
             <Box sx={{ flexDirection: "column", width: 1, flex: 1 }}>
                 {ActivitiesSideMenuList.map((item) => (
                     <ActivitiesSideMenuButton key={item.label} item={item} />

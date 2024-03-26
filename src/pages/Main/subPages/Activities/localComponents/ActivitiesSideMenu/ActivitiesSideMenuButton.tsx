@@ -22,8 +22,8 @@ export const ActivitiesSideMenuButton: React.FC<ActivitiesSideMenuButtonProps> =
                 // backgroundColor: active ? (item.subItems ? "" : "background.default") : "primary.main",
                 // color: active ? (item.subItems ? "secondary.main" : "primary.main") : "background.default",
                 pointerEvents: active ? (item.subItems ? "auto" : "none") : "auto",
-                fontWeight: "bold",
                 gap: "1vw",
+                fontSize: "1.1rem",
             }}
             onClick={() => navigate(item.path)}
         >
@@ -31,7 +31,7 @@ export const ActivitiesSideMenuButton: React.FC<ActivitiesSideMenuButtonProps> =
             {item.subItems && (
                 <KeyboardArrowDown sx={{ marginLeft: "auto", rotate: collapse ? "-180deg" : "", transition: "0.3s" }} />
             )}
-            {/* <Box>
+            {/* <Box sx={{}}>
                 {item.subItems?.map((item) => (
                     <p>{item.label}</p>
                 ))}

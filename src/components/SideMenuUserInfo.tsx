@@ -13,17 +13,17 @@ export const SideMenuUserInfo: React.FC<SideMenuUserInfoProps> = ({}) => {
                 width: "100%",
                 alignItems: "center",
                 padding: "1vw 0",
-                gap: "1vw",
+                gap: "0.5vw",
             }}
         >
-            <Avatar />
+            <Avatar sx={{ width: "2.5vw", height: "2.5vw" }} />
             <Box
                 sx={{
                     flexDirection: "column",
                 }}
             >
-                <p>Nome Sobrenome</p>
-                <p style={{ fontSize: "90%" }}>Cargo</p>
+                <p style={{ fontSize: "0.9rem" }}>Nome Sobrenome</p>
+                <p style={{ fontSize: "0.8rem" }}>Cargo</p>
             </Box>
             <IconButton sx={{ ...iconButtonStyle, marginLeft: "auto" }}>
                 <VerticalDotsIcon />
