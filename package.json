@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.0",
+    "@emotion/styled": "^11.11.5",
+    "@mantine/core": "^7.7.1",
+    "@mantine/hooks": "^7.7.1",
     "@mui/icons-material": "^5.15.14",
+    "@mui/joy": "^5.0.0-beta.32",
     "@mui/material": "^5.15.11",
     "@mui/x-data-grid": "^7.0.0",
     "burgos-snackbar": "^2.1.0",
@@ -31,6 +34,9 @@
     "eslint": "^8.56.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "postcss": "^8.4.38",
+    "postcss-preset-mantine": "^1.13.0",
+    "postcss-simple-vars": "^7.0.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.4"
   }

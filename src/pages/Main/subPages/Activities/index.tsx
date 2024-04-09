@@ -11,7 +11,7 @@ export const Activities: React.FC<ActivitiesProps> = ({ }) => {
         <Box
             sx={{
                 height: "100%",
-                width: "100%",
+                width: "97.5%",
             }}
         >   
             <ActivitiesSideMenu />

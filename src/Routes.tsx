@@ -17,8 +17,12 @@ export const Routes: React.FC<RoutesProps> = ({}) => {
                 <Route path="/cadastro" element={<Signup />} />
                 <Route path="/main/*" element={<Main />} />
             </ReactRoutes>
-            <p style={{ position: "absolute", bottom: "2vw", right: "2vw" }}>{new Date().getFullYear()} © Direitos Reservados</p>
-            <p style={{ position: "absolute", bottom: "1vw", right: "2vw" }}>Powered By BOZ - {app_version}</p>
+            <p style={{ position: "absolute", bottom: "2vw", right: "2vw", fontSize: "0.7rem" }}>
+                {new Date().getFullYear()} © Direitos Reservados
+            </p>
+            <p style={{ position: "absolute", bottom: "1vw", right: "2vw", fontSize: "0.7rem" }}>
+                Powered By BOZ - {app_version}
+            </p>
         </>
     )
 }
